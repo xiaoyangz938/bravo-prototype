@@ -10,9 +10,10 @@
     'A shared cultural experience connecting people, place and performance.',
     'A brand moment translated into a clear, buildable live experience.'
   ];
+  const projectNames = ['Afterlight — Tour Identity','Open Air — Festival System','Signal / Noise — Live Campaign','Common Ground — Cultural Programme','Night Shift — Brand Experience','Field Notes — Stage Environment','Parade — Visual System','Low Frequency — Creative Technology','The Long Way — Live Content'];
   const projects = Array.from({ length: 99 }, (_, i) => ({
     id: String(i + 1).padStart(2, '0'),
-    title: `Project ${String(i + 1).padStart(2, '0')}`,
+    title: projectNames[i % projectNames.length],
     type: types[i % types.length],
     description: descriptions[i % descriptions.length],
     year: 2026 - (i % 3)
@@ -27,19 +28,20 @@
   function homePage() {
     const media = (className='story-wide') => `<div class="story-media ${className}" aria-label="Image placeholder"></div>`;
     const caption = (text) => `<p class="story-caption">${text}</p>`;
+    const bodyCopy = 'BRAVO builds live identities for artists, audiences and places. We move between strategy, design and production to make every visual decision feel intentional in the room, on screen and in memory.';
     return `<article class="page home-story">
       <section class="story-hero shell">${media('story-hero-media')}<div class="story-entry" data-sound-prompt><p>This project is designed to be experienced with music.</p><button class="button story-sound" type="button" data-sound>Enter with sound <span>→</span></button></div></section>
-      <section class="story-title shell"><h1>XXXXXXXXXX<br>XXXXXXXXXX</h1><p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p></section>
+      <section class="story-title shell"><h1>Ideas made<br>for live moments.</h1><p>Creative direction, visual systems and production design for concerts, tours, festivals and cultural projects.</p></section>
       <section class="story-sequence shell">
         ${media()}${media()}
-        <div class="story-split"><p class="story-copy">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>${media('story-tall')}</div>
-        ${media()}${caption('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')}
-        ${media()}${caption('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')}
+        <div class="story-split"><p class="story-copy">${bodyCopy}<br><br>We start with the question behind the brief, then build a clear visual language that can travel from the first sketch to the final cue.</p>${media('story-tall')}</div>
+        ${media()}${caption('A visual language for a team, a place and a shared audience.')}
+        ${media()}${caption('Campaign image-making, motion tests and small details that give the work its rhythm.')}
         ${media()}
-        <div class="story-split story-split--reverse">${media('story-tall')}<p class="story-copy">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p></div>
+        <div class="story-split story-split--reverse">${media('story-tall')}<p class="story-copy">Selected work is shown as a sequence rather than a single hero image: moving image, stills, typography and spatial studies sit alongside the project story.</p></div>
         ${media()}${media()}${media()}
         <div class="story-two-up">${media('story-tall')}${media('story-tall')}</div>
-        ${media()}${caption('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')}
+        ${media()}${caption('A toolkit of moments: the quiet frame, the wide shot and the detail that holds the memory.')}
         ${media()}
         <div class="story-two-up">${media('story-tall')}${media('story-tall')}</div>
         ${media()}
@@ -47,7 +49,7 @@
         <div class="story-three-up">${media('story-tall')}${media('story-tall')}${media('story-tall')}</div>
         ${media()}
       </section>
-      <section class="story-meta shell"><div><span>Project credits</span><strong>CLIENT<br>XXXXXXXX</strong></div><div><span>Sector / discipline</span><strong>XXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXX</strong></div><div><span>BRAVO team</span><strong>Creative direction<br>Design · Motion<br>Development</strong></div><div><span>Photography / partners</span><strong>XXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXX</strong></div></section>
+      <section class="story-meta shell"><div><span>Project credits</span><strong>BRAVO Studio<br>Selected work 2026</strong></div><div><span>Sector / discipline</span><strong>Live entertainment<br>Culture &amp; events<br>Brand experience</strong></div><div><span>BRAVO team</span><strong>Creative direction<br>Design · Motion<br>Development</strong></div><div><span>Photography / partners</span><strong>Working with artists<br>production teams &amp; partners</strong></div></section>
       <section class="story-related shell"><div class="section-head"><p class="eyebrow">Related projects</p><a class="small-note" href="#projects">Drag / swipe →</a></div><div class="related-grid">${projects.slice(0,4).map((p,i)=>projectCard(p,i)).join('')}</div></section>
     </article>`;
   }
