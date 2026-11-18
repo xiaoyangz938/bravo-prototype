@@ -62,7 +62,7 @@ html, body { background: #f4f4f1; color: #222; }
 .projects-grid { padding-top: 24px; }
 .studio-wireframe-hero { min-height: auto; padding-top: 150px; padding-bottom: 110px; text-align:center; align-items:center; }
 .studio-wireframe-hero .display { max-width: 980px; font-size: clamp(50px, 6vw, 86px); }
-.studio-wireframe-hero .lead { width:min(900px, 78%); margin-top:54px; font-size:24px; line-height:1.18; }
+.studio-wireframe-hero .lead { width:min(900px, 78%); align-self:center; margin:54px auto 0; text-align:center; font-size:24px; line-height:1.18; }
 .studio-visual { margin-inline: var(--page-pad); aspect-ratio:16/9; background:#fff; }
 .studio-visual__inner { position:absolute; inset:0; display:grid; place-items:center; color:#777; font-size:12px; letter-spacing:.12em; }
 .studio-team-wireframe { text-align:center; max-width:980px; margin-inline:auto; }
