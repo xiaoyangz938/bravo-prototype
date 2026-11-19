@@ -160,10 +160,69 @@ html, body { background: #f4f4f1; color: #222; }
 .projects-note-row .projects-note, .projects-filter-hint { margin:0; font-size:10px; font-weight:700; text-transform:uppercase; color:#666; }
 .projects-filter-hint { text-align:right; }
 .projects-page .projects-grid { padding-top:0; }
-.projects-page .project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:44px 14px; align-items:start; }
-.projects-page .project-card:nth-child(n) { grid-column:auto; margin-top:0; }
-.projects-page .project-card:nth-child(odd) .project-art { aspect-ratio:1.45; }
-.projects-page .project-card:nth-child(even) .project-art { aspect-ratio:.84; }
+.projects-page .project-grid { grid-template-columns:repeat(24,minmax(0,1fr)); column-gap:clamp(18px,1.3vw,38px); row-gap:clamp(220px,12vw,350px); align-items:start; grid-auto-flow:row; }
+.projects-page .project-card:nth-child(n) { margin-top:0; }
+.projects-page .project-card:nth-child(30n+1)  { grid-column:1 / span 12; }
+.projects-page .project-card:nth-child(30n+2)  { grid-column:13 / span 12; }
+.projects-page .project-card:nth-child(30n+3)  { grid-column:1 / span 8; }
+.projects-page .project-card:nth-child(30n+4)  { grid-column:9 / span 11; }
+.projects-page .project-card:nth-child(30n+5)  { grid-column:20 / span 5; }
+.projects-page .project-card:nth-child(30n+6)  { grid-column:1 / span 9; }
+.projects-page .project-card:nth-child(30n+7)  { grid-column:10 / span 6; }
+.projects-page .project-card:nth-child(30n+8)  { grid-column:16 / span 9; }
+.projects-page .project-card:nth-child(30n+9)  { grid-column:1 / span 14; }
+.projects-page .project-card:nth-child(30n+10) { grid-column:15 / span 10; }
+.projects-page .project-card:nth-child(30n+11) { grid-column:1 / span 6; }
+.projects-page .project-card:nth-child(30n+12) { grid-column:7 / span 18; }
+.projects-page .project-card:nth-child(30n+13) { grid-column:1 / span 8; }
+.projects-page .project-card:nth-child(30n+14) { grid-column:9 / span 8; }
+.projects-page .project-card:nth-child(30n+15) { grid-column:17 / span 8; }
+.projects-page .project-card:nth-child(30n+16) { grid-column:1 / span 7; }
+.projects-page .project-card:nth-child(30n+17) { grid-column:8 / span 7; }
+.projects-page .project-card:nth-child(30n+18) { grid-column:15 / span 10; }
+.projects-page .project-card:nth-child(30n+19) { grid-column:1 / span 5; }
+.projects-page .project-card:nth-child(30n+20) { grid-column:6 / span 14; }
+.projects-page .project-card:nth-child(30n+21) { grid-column:20 / span 5; }
+.projects-page .project-card:nth-child(30n+22) { grid-column:1 / span 9; }
+.projects-page .project-card:nth-child(30n+23) { grid-column:10 / span 6; }
+.projects-page .project-card:nth-child(30n+24) { grid-column:16 / span 9; }
+.projects-page .project-card:nth-child(30n+25) { grid-column:1 / span 8; }
+.projects-page .project-card:nth-child(30n+26) { grid-column:9 / span 6; }
+.projects-page .project-card:nth-child(30n+27) { grid-column:15 / span 10; }
+.projects-page .project-card:nth-child(30n+28) { grid-column:1 / span 4; }
+.projects-page .project-card:nth-child(30n+29) { grid-column:5 / span 7; }
+.projects-page .project-card:nth-child(30n+30) { grid-column:12 / span 13; }
+
+.projects-page .project-card:nth-child(30n+1) .project-art { aspect-ratio:1.92; }
+.projects-page .project-card:nth-child(30n+2) .project-art { aspect-ratio:.78; }
+.projects-page .project-card:nth-child(30n+3) .project-art { aspect-ratio:.75; }
+.projects-page .project-card:nth-child(30n+4) .project-art { aspect-ratio:.78; }
+.projects-page .project-card:nth-child(30n+5) .project-art { aspect-ratio:.75; }
+.projects-page .project-card:nth-child(30n+6) .project-art { aspect-ratio:1.85; }
+.projects-page .project-card:nth-child(30n+7) .project-art { aspect-ratio:.75; }
+.projects-page .project-card:nth-child(30n+8) .project-art { aspect-ratio:.79; }
+.projects-page .project-card:nth-child(30n+9) .project-art { aspect-ratio:1.91; }
+.projects-page .project-card:nth-child(30n+10) .project-art { aspect-ratio:1.79; }
+.projects-page .project-card:nth-child(30n+11) .project-art { aspect-ratio:.65; }
+.projects-page .project-card:nth-child(30n+12) .project-art { aspect-ratio:1.92; }
+.projects-page .project-card:nth-child(30n+13) .project-art,
+.projects-page .project-card:nth-child(30n+14) .project-art,
+.projects-page .project-card:nth-child(30n+15) .project-art { aspect-ratio:1.5; }
+.projects-page .project-card:nth-child(30n+16) .project-art,
+.projects-page .project-card:nth-child(30n+17) .project-art { aspect-ratio:1.52; }
+.projects-page .project-card:nth-child(30n+18) .project-art { aspect-ratio:1.67; }
+.projects-page .project-card:nth-child(30n+19) .project-art { aspect-ratio:.74; }
+.projects-page .project-card:nth-child(30n+20) .project-art { aspect-ratio:1.92; }
+.projects-page .project-card:nth-child(30n+21) .project-art { aspect-ratio:.75; }
+.projects-page .project-card:nth-child(30n+22) .project-art { aspect-ratio:.88; }
+.projects-page .project-card:nth-child(30n+23) .project-art { aspect-ratio:.58; }
+.projects-page .project-card:nth-child(30n+24) .project-art { aspect-ratio:1.88; }
+.projects-page .project-card:nth-child(30n+25) .project-art { aspect-ratio:.78; }
+.projects-page .project-card:nth-child(30n+26) .project-art { aspect-ratio:.75; }
+.projects-page .project-card:nth-child(30n+27) .project-art { aspect-ratio:1.8; }
+.projects-page .project-card:nth-child(30n+28) .project-art { aspect-ratio:.75; }
+.projects-page .project-card:nth-child(30n+29) .project-art { aspect-ratio:.75; }
+.projects-page .project-card:nth-child(30n+30) .project-art { aspect-ratio:1.82; }
 .projects-page .project-meta h3 { font-size:12px; }
 .projects-page .project-meta p { max-width:500px; font-size:16px; line-height:1.02; }
 
@@ -194,5 +253,6 @@ html, body { background: #f4f4f1; color: #222; }
   .projects-filter-list { margin:35px auto 58px; gap:10px; }
   .projects-note-row { margin-bottom:30px; align-items:flex-start; gap:20px; }
   .projects-page .project-grid { grid-template-columns:1fr; gap:38px; }
+  .projects-page .project-card:nth-child(n) { grid-column:1 / -1; }
   .projects-page .project-card:nth-child(n) .project-art { aspect-ratio:1.2; }
 }
